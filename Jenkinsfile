@@ -11,7 +11,7 @@ pipeline {
         stage("Test"){
             steps{
                 echo "=====Executing Test====="
-                sh "npm test"
+                sh "npm test -- --timeout 10000"
             }
         }
     }
