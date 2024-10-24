@@ -28,6 +28,9 @@ dbo.connectToServer(function (err) {
 
   // start the Express server
   app.listen(PORT, () => {
+    app.emit("appStarted");
     console.log(`Server is running on port: ${PORT}`);
   });
 });
+
+module.exports = app;
